@@ -71,8 +71,6 @@ class InfinityMap<K, V> {
 
   set ( key: K, value: V ): this {
 
-    if ( this.has ( key ) ) return this;
-
     this.current.set ( key, value );
 
     if ( this.current.size === 16777215 ) {

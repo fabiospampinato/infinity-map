@@ -1,0 +1,36 @@
+{
+  "name": "infinity-map",
+  "description": "A Map that doesn't throw if you put more than 16 million items in it. Because that's what the native `Map` object does for some reason.",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "clean": "rimraf dist",
+    "compile": "tsc --skipLibCheck && tstei",
+    "compile:watch": "tsc --skipLibCheck --watch",
+    "prepublishOnly": "npm run clean && npm run compile"
+  },
+  "bugs": {
+    "url": "https://github.com/fabiospampinato/infinity-map/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Fabio Spampinato",
+    "email": "spampinabio@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fabiospampinato/infinity-map.git"
+  },
+  "keywords": [
+    "map",
+    "infinite",
+    "infinity",
+    "limitless"
+  ],
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "typescript": "^4.5.5",
+    "typescript-transform-export-interop": "^1.0.4"
+  }
+}

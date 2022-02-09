@@ -71,7 +71,19 @@ class InfinityMap<K, V> {
 
   set ( key: K, value: V ): this {
 
-    this.current.set ( key, value );
+    let targetMap = this.current;
+
+    for ( const map of this.pool ) {
+
+      if ( !map.has ( key ) ) continue;
+
+      targetMap = map;
+
+      break;
+
+    }
+
+    targetMap.set ( key, value );
 
     if ( this.current.size === 16777215 ) {
 

@@ -78,13 +78,17 @@ class InfinityMap<K, V> {
 
     let targetMap = this.current;
 
-    for ( const map of this.pool ) {
+    if ( this.pool.length > 1 ) {
 
-      if ( !map.has ( key ) ) continue;
+      for ( const map of this.pool ) {
 
-      targetMap = map;
+        if ( !map.has ( key ) ) continue;
 
-      break;
+        targetMap = map;
+
+        break;
+
+      }
 
     }
 

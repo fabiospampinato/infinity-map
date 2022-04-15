@@ -10,11 +10,16 @@ class InfinityMap<K, V> {
 
   /* CONSTRUCTOR */
 
-  constructor ( entries?: readonly (readonly [K, V])[] ) {
+  constructor ( entries: readonly (readonly [K, V])[] = [] ) {
 
-    this.clear ();
+    if ( entries.length < 16777215 ) {
 
-    if ( entries ) {
+      this.current = new Map<K, V> ( entries );
+      this.pool = [this.current];
+
+    } else {
+
+      this.clear ();
 
       for ( const [key, value] of entries ) {
 

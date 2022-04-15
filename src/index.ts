@@ -14,12 +14,13 @@ class InfinityMap<K, V> {
 
     if ( entries.length < 16777215 ) {
 
-      this.current = new Map<K, V> ( entries );
+      this.current = new Map ( entries );
       this.pool = [this.current];
 
     } else {
 
-      this.clear ();
+      this.current = new Map ();
+      this.pool = [this.current];
 
       for ( const [key, value] of entries ) {
 
@@ -43,7 +44,7 @@ class InfinityMap<K, V> {
 
   clear (): undefined {
 
-    this.current = new Map<K, V> ();
+    this.current = new Map ();
     this.pool = [this.current];
 
     return;
@@ -65,6 +66,8 @@ class InfinityMap<K, V> {
       return map.get ( key );
 
     }
+
+    return;
 
   }
 

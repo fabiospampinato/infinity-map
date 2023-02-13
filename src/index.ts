@@ -162,7 +162,7 @@ class InfinityMap<K, V> {
 
   }
 
-};
+}
 
 /* EXPORT */
 

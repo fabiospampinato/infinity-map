@@ -12,11 +12,11 @@ describe ( 'InfinityMap', it => {
 
     const map = new InfinityMap ();
 
-    for ( let i = 0, l = 20000000; i < l; i++ ) {
+    for ( let i = 0, l = 20_000_000; i < l; i++ ) {
       map.set ( i, i );
     }
 
-    for ( let i = 0, l = 20000000; i < l; i++ ) {
+    for ( let i = 0, l = 20_000_000; i < l; i++ ) {
       t.true ( map.has ( i ) );
     }
 

@@ -2,6 +2,7 @@
   "name": "infinity-map",
   "repository": "github:fabiospampinato/infinity-map",
   "description": "A Map that doesn't throw if you put more than 16 million items in it. Because that's what the native `Map` object does for some reason.",
+  "license": "MIT",
   "version": "2.0.0",
   "type": "module",
   "main": "dist/index.js",
@@ -26,9 +27,9 @@
     "limitless"
   ],
   "devDependencies": {
-    "fava": "^0.2.1",
+    "fava": "^0.3.4",
     "test262-harness": "^10.0.0",
-    "tsex": "^3.0.1",
-    "typescript": "^5.1.6"
+    "tsex": "^4.0.2",
+    "typescript": "^5.7.3"
   }
 }

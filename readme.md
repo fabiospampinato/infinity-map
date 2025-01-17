@@ -7,7 +7,7 @@ Because that's what the native `Map` object does for some reason.
 ## Install
 
 ```sh
-npm install --save infinity-map
+npm install infinity-map
 ```
 
 ## Usage
